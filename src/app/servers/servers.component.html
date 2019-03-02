@@ -1,0 +1,18 @@
+
+<button type="button" class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Primary</button> //property binding
+<p>
+  {{'Server'}} with ID {{serverId}} is {{serverStatus}} {{getServerStatus()}}
+</p>
+<p
+  [innerText]="allowNewServer">{{allowNewServer}}
+  {{serverCreationStatus}}
+</p>
+
+<label>Server Name</label>
+<!-- $event will be the data emitted from the event  -->
+<!-- <input type="text" class ="form-control" (input)="onUpdateServerName($event)"> -->
+
+the value servername bind to the input box and the input box's input value bind to servername displayed below the box
+<input type="text" class ="form-control" [(ngModel)]="serverName">
+
+<p>{{ serverName }}</p>
